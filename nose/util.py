@@ -640,7 +640,8 @@ def transplant_class(cls, module):
 
     """
     class C(cls):
-        pass
+        class Meta:
+            app_label = 'nose_app_label_for_django'
     C.__module__ = module
     C.__name__ = cls.__name__
     C.__qualname__ = cls.__name__
